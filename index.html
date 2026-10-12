@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Govt Workstation Dashboard | North 24 Parganas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+    <div class="portal-bg portal-bg-saffron"></div>
+    <div class="portal-bg portal-bg-green"></div>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Emblem" class="brand-logo" onerror="this.style.display='none'">
+                </div>
+                <h1>Master Portal Login</h1>
+                <p>Health &amp; Family Welfare Department • North 24 Parganas</p>
+            </div>
+
+            <form id="loginForm" onsubmit="return false;">
+                <div class="input-group">
+                    <label for="username">Username / User ID</label>
+                    <div class="input-field-wrap">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="username" placeholder="Enter your username" required autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-field-wrap password-wrap">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="password" placeholder="Enter your password" required autocomplete="new-password" />
+                        <button type="button" id="togglePassword" class="toggle-pwd" title="Show/Hide Password"><i class="fa-solid fa-eye-slash"></i></button>
+                    </div>
+                </div>
+
+                <div id="loginStatus" class="login-status" aria-live="polite"></div>
+
+                <button type="button" id="loginBtn" class="login-submit-btn">
+                    <span>Login to Workspace</span>
+                    <i class="fa-solid fa-arrow-right btn-arrow"></i>
+                </button>
+            </form>
+        </div>
+        <div class="login-footer-note">
+            &copy; Designed &amp; Developed by ITSP, North 24 Parganas
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
