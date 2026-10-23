@@ -24,15 +24,53 @@ body {
     flex-direction: column;
 }
 
-/* --- LOGIN PAGE STYLES (Indian Flag Theme) --- */
+/* --- LOGIN PAGE STYLES (Indian Flag Theme & Wave Background) --- */
 body.login-page {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(255,153,51,0.12) 0%, rgba(19,136,8,0.1) 100%);
+    background: #ffffff; /* মূল ব্যাকগ্রাউন্ড সাদা রাখা হলো, যাতে ওয়েভগুলো ফুটে ওঠে */
     position: relative;
     overflow-x: hidden;
+}
+
+/* ব্যাকগ্রাউন্ড ওয়েভ এবং কার্ভ ডিজাইন কন্টেইনার */
+.bg-wave-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* সুদৃশ্য কার্ভড শেপ বা ওয়েভ স্টাইল */
+.bg-wave {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    opacity: 0.65;
+}
+
+.wave-saffron {
+    top: -20%;
+    right: -20%;
+    background: linear-gradient(135deg, rgba(255, 153, 51, 0.15), rgba(255, 224, 178, 0.3));
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    filter: blur(40px);
+    transform: rotate(-15deg);
+}
+
+.wave-green {
+    bottom: -20%;
+    left: -20%;
+    background: linear-gradient(135deg, rgba(19, 136, 8, 0.12), rgba(232, 245, 233, 0.4));
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+    filter: blur(50px);
+    transform: rotate(15deg);
 }
 
 .portal-bg { position: absolute; top: 0; width: 60vw; height: 350px; z-index: -1; filter: blur(90px); opacity: 0.2; pointer-events: none; }
@@ -47,6 +85,7 @@ body.login-page {
     flex-direction: column;
     gap: 1.25rem;
     animation: fadeIn 0.5s ease-out;
+    z-index: 1; /* ফর্মটি ওয়েভের উপরে দেখানোর জন্য */
 }
 
 .login-card {
@@ -184,11 +223,11 @@ body.login-page {
 
 /* --- DASHBOARD PAGE STYLES --- */
 .main-header {
-    background: linear-gradient(135deg, #ff9933, #138808); /* Saffron to Green gradient */
+    background: linear-gradient(135deg, #ff9933, #138808);
     color: #fff;
     padding: 18px 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-bottom: 4px solid #000080; /* Navy Blue Chakra border accent */
+    border-bottom: 4px solid #000080;
 }
 
 .header-container {
@@ -345,10 +384,10 @@ body.login-page {
 .dash-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); }
 
 /* Section Wise Specific Colors (Vibrant Flag Touch) */
-.btn-telemedicine { background: linear-gradient(135deg, #ff9933, #e07b1e); } /* Saffron tone */
-.btn-report { background: linear-gradient(135deg, #0f4c81, #1b6ca8); }       /* Navy Blue tone */
-.btn-govt { background: linear-gradient(135deg, #7c3aed, #4f46e5); }         /* Royal Purple tone */
-.btn-sheet { background: linear-gradient(135deg, #138808, #0b6623); }        /* Indian Green tone */
+.btn-telemedicine { background: linear-gradient(135deg, #ff9933, #e07b1e); } 
+.btn-report { background: linear-gradient(135deg, #0f4c81, #1b6ca8); }        
+.btn-govt { background: linear-gradient(135deg, #7c3aed, #4f46e5); }         
+.btn-sheet { background: linear-gradient(135deg, #138808, #0b6623); }         
 
 /* Footer */
 .main-footer {
