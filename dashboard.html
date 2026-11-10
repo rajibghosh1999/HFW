@@ -1,172 +1,300 @@
-```
-<!-- Header Section -->
-<header class="main-header">
-    <div class="header-container">
-        <div class="header-content">
-            <img src="[https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg](https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg)" alt="Ashok Stambh" class="emblem-logo">
-            <div class="header-text">
-                <h1>Government of West Bengal</h1>
-                <h2>Health & Family Welfare Department</h2>
-                <h3>North 24 Parganas District</h3>
-            </div>
-        </div>
-        <div class="header-right-actions">
-            <div class="user-chip">
-                <span class="live-dot"></span>
-                <div><strong id="userName">User</strong><small id="userRole">Authorized User</small></div>
-            </div>
-            <button class="logout-btn" id="logoutBtn" type="button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
-        </div>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <link rel="icon" type="image/png" href="https://iconape.com/wp-content/png_logo_vector/national-health-mission-logo-logo-icon-svg-png.png">
+    <meta property="og:title" content="Workstation Dashboard | N24PGS">
+    <meta property="og:description" content="Health & Family Welfare Department.">
+    <meta property="og:image" content="https://iconape.com/wp-content/png_logo_vector/national-health-mission-logo-logo-icon-svg-png.png">
+    <meta property="og:url" content="https://rajibghosh1999.github.io/n24pgs/">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govt Workstation Dashboard | H&FW Dept, North 24 Parganas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Ashok Stambh" class="emblem-logo">
+                <div class="header-text">
+                    <h1>Government of West Bengal</h1>
+                    <h2>Health & Family Welfare Department</h2>
+                    <h3>North 24 Parganas District</h3>
+                </div>
+            </div>
+            <div class="header-right-actions">
+                <div class="user-chip">
+                    <span class="live-dot"></span>
+                    <div><strong id="userName">User</strong><small id="userRole">Authorized User</small></div>
+                </div>
+                <button class="logout-btn" id="logoutBtn" type="button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Container -->
+    <main class="dashboard-container">
+
+        <!-- Live Clock & Search Bar Row -->
+        <div class="dashboard-top-row">
+            <div class="search-section">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="appSearch" type="search" placeholder="Search portals, reports or google sheets..." autocomplete="off">
+                </div>
+            </div>
+            <div class="clock-card">
+                <div class="date-display" id="liveDate">--</div>
+                <div class="time-display" id="liveClock">--:--:--</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Telemedicine Portal -->
+        <section class="dash-section" data-category="Telemedicine Portal">
+            <div class="section-header">
+                <i class="fa-solid fa-user-doctor section-icon"></i>
+                <h2>Telemedicine Portal</h2>
+            </div>
+            <div class="button-grid">
+                <a href="https://v2.swasthyaingit.in/#/admin/signin" target="_blank" class="dash-btn btn-telemedicine">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span>Telemedicine Admin</span>
+                </a>
+                <a href="https://v2.swasthyaingit.in/#/" target="_blank" class="dash-btn btn-telemedicine">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Telemedicine Users</span>
+                </a>
+            </div>
+        </section>
+
+        
+<!-- Section 2: Telemedicine Report -->
+<section class="dash-section" data-category="Telemedicine Report">
+
+    <div class="section-header">
+        <i class="fa-solid fa-chart-line section-icon"></i>
+        <h2>Telemedicine Report</h2>
     </div>
-</header>
 
-<!-- Main Dashboard Container -->
-<main class="dashboard-container">
+    <div class="button-grid">
 
-    <!-- Live Clock & Search Bar Row -->
-    <div class="dashboard-top-row">
-        <div class="search-section">
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input id="appSearch" type="search" placeholder="Search portals, reports or google sheets..." autocomplete="off">
-            </div>
-        </div>
-        <div class="clock-card">
-            <div class="date-display" id="liveDate">--</div>
-            <div class="time-display" id="liveClock">--:--:--</div>
-        </div>
+        <a href="https://rajibghosh1999.github.io/Telemedicine-State-Report/"
+           target="_blank" class="dash-btn btn-report">
+            <i class="fa-solid fa-flag"></i>
+            <span>
+                Telemedicine State Report
+                <small class="portal-description">
+                    State-level telemedicine performance and consultation reports.
+                </small>
+            </span>
+        </a>
+
+        <a href="https://rajibghosh1999.github.io/Daily-Spoke-Report/"
+           target="_blank" class="dash-btn btn-report">
+            <i class="fa-solid fa-calendar-day"></i>
+            <span>
+                Daily Spoke Report
+                <small class="portal-description">
+                    Daily spoke-wise consultation and referral performance.
+                </small>
+            </span>
+        </a>
+
+        <a href="https://rajibghosh1999.github.io/Telemedicine-Hub-Report/"
+           target="_blank" class="dash-btn btn-report">
+            <i class="fa-solid fa-hospital-user"></i>
+            <span>
+                Telemedicine Hub Report
+                <small class="portal-description">
+                    Specialist hub consultation and performance analytics.
+                </small>
+            </span>
+        </a>
+
+        <a href="https://rajibghosh1999.github.io/Hourly-Spoke-Report/"
+           target="_blank" class="dash-btn btn-report">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>
+                Hourly Spoke Report
+                <small class="portal-description">
+                    Hour-wise telemedicine consultation monitoring.
+                </small>
+            </span>
+        </a>
+
+        <!-- NEW: Logistics Reporting Portal -->
+        <a href="https://rajibghosh1999.github.io/Logestics-N24PGS/"
+           target="_blank" class="dash-btn btn-report">
+            <i class="fa-solid fa-truck-ramp-box"></i>
+            <span>
+                Logistics N24PGS
+                <small class="portal-description">
+                    District-level logistics, IT equipment and inventory reporting.
+                </small>
+            </span>
+        </a>
+
+    </div>
+</section>
+
+
+     
+<!-- Section 3: Govt Portal -->
+<section class="dash-section" data-category="Govt Portal">
+
+    <div class="section-header">
+        <i class="fa-solid fa-building-columns section-icon"></i>
+        <h2>Govt Portal</h2>
     </div>
 
-    <!-- Section 1: Telemedicine Portal -->
-    <section class="dash-section" data-category="Telemedicine Portal">
-        <div class="section-header">
-            <i class="fa-solid fa-user-doctor section-icon"></i>
-            <h2>Telemedicine Portal</h2>
-        </div>
-        <div class="button-grid">
-            <a href="[https://v2.swasthyaingit.in/#/admin/signin](https://v2.swasthyaingit.in/#/admin/signin)" target="_blank" class="dash-btn btn-telemedicine" title="Administrative login for managing Telemedicine services, users, and system configurations.">
-                <i class="fa-solid fa-user-shield"></i>
-                <span>Telemedicine Admin</span>
-            </a>
-            <a href="[https://v2.swasthyaingit.in/#/](https://v2.swasthyaingit.in/#/)" target="_blank" class="dash-btn btn-telemedicine" title="User access portal for conducting online doctor consultations and patient healthcare services.">
-                <i class="fa-solid fa-users"></i>
-                <span>Telemedicine Users</span>
-            </a>
-        </div>
-    </section>
+    <div class="button-grid">
 
-    <!-- Section 2: Telemedicine Report -->
-    <section class="dash-section" data-category="Telemedicine Report">
-        <div class="section-header">
-            <i class="fa-solid fa-chart-line section-icon"></i>
-            <h2>Telemedicine Report</h2>
-        </div>
-        <div class="button-grid">
-            <a href="[https://rajibghosh1999.github.io/Telemedicine-State-Report/](https://rajibghosh1999.github.io/Telemedicine-State-Report/)" target="_blank" class="dash-btn btn-report" title="State-level performance and statistical overview report for telemedicine services.">
-                <i class="fa-solid fa-flag"></i>
-                <span>Telemedicine-State-Report</span>
-            </a>
-            <a href="[https://rajibghosh1999.github.io/Daily-Spoke-Report/](https://rajibghosh1999.github.io/Daily-Spoke-Report/)" target="_blank" class="dash-btn btn-report" title="Daily operational activity and consultation tracking report for individual spokes.">
-                <i class="fa-solid fa-calendar-day"></i>
-                <span>Daily-Spoke-Report</span>
-            </a>
-            <a href="[https://rajibghosh1999.github.io/Telemedicine-Hub-Report/](https://rajibghosh1999.github.io/Telemedicine-Hub-Report/)" target="_blank" class="dash-btn btn-report" title="Comprehensive performance tracking and analytics report for telemedicine hubs.">
-                <i class="fa-solid fa-hospital-user"></i>
-                <span>Telemedicine-Hub-Report</span>
-            </a>
-            <a href="[https://rajibghosh1999.github.io/Hourly-Spoke-Report/](https://rajibghosh1999.github.io/Hourly-Spoke-Report/)" target="_blank" class="dash-btn btn-report" title="Hour-by-hour patient consultation breakdown and analytics report for spokes.">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <span>Hourly-Spoke-Report</span>
-            </a>
-            <a href="[https://rajibghosh1999.github.io/Logestics-N24PGS/](https://rajibghosh1999.github.io/Logestics-N24PGS/)" target="_blank" class="dash-btn btn-report" title="District logistics tracking and inventory management reporting portal for North 24 Parganas.">
-                <i class="fa-solid fa-truck"></i>
-                <span>Logistics Report (N24PGS)</span>
-            </a>
-        </div>
-    </section>
+        <!-- Existing Portal: HWC -->
+        <a href="https://aam.mohfw.gov.in/home/login"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-house-medical"></i>
+            <span>
+                HWC Portal
+                <small class="portal-description">
+                    Ayushman Arogya Mandir facility information and reporting.
+                </small>
+            </span>
+        </a>
 
-    <!-- Section 3: Govt Portal -->
-    <section class="dash-section" data-category="Govt Portal">
-        <div class="section-header">
-            <i class="fa-solid fa-building-columns section-icon"></i>
-            <h2>Govt Portal</h2>
-        </div>
-        <div class="button-grid">
-            <a href="[https://aam.mohfw.gov.in/home/login](https://aam.mohfw.gov.in/home/login)" target="_blank" class="dash-btn btn-govt" title="Ayushman Arogya Mandir Portal for managing Health and Wellness Center operations and reporting.">
-                <i class="fa-solid fa-house-medical"></i>
-                <span>HWC Portal</span>
-            </a>
-            <a href="[https://skmis.wbhealth.gov.in/](https://skmis.wbhealth.gov.in/)" target="_blank" class="dash-btn btn-govt" title="Swasthya Kanya Management Information System portal for healthcare scheme tracking.">
-                <i class="fa-solid fa-notes-medical"></i>
-                <span>SKMIS Portal</span>
-            </a>
-            <a href="[https://ncd.wb.gov.in/Auth/Login](https://ncd.wb.gov.in/Auth/Login)" target="_blank" class="dash-btn btn-govt" title="Non-Communicable Diseases (NCD) Portal for screening and patient data management.">
-                <i class="fa-solid fa-heart-pulse"></i>
-                <span>NCD Portal</span>
-            </a>
-            <a href="[https://www.wbhealth.gov.in/](https://www.wbhealth.gov.in/)" target="_blank" class="dash-btn btn-govt" title="Official Website of the Department of Health & Family Welfare, Government of West Bengal.">
-                <i class="fa-solid fa-hospital"></i>
-                <span>WB Health Department</span>
-            </a>
-            <a href="[https://healthkpi.wbhealth.gov.in/](https://healthkpi.wbhealth.gov.in/)" target="_blank" class="dash-btn btn-govt" title="Health Key Performance Indicators (KPI) Dashboard for monitoring district health metrics.">
-                <i class="fa-solid fa-chart-pie"></i>
-                <span>Health KPI Dashboard</span>
-            </a>
-            <a href="[https://swasthbharat.mohfw.gov.in/](https://swasthbharat.mohfw.gov.in/)" target="_blank" class="dash-btn btn-govt" title="Swasth Bharat Portal for national health initiatives, awareness, and campaigns.">
-                <i class="fa-solid fa-globe"></i>
-                <span>Swasth Bharat Portal</span>
-            </a>
-            <a href="[https://finance.wb.gov.in/Fin_New/HomePage.aspx](https://finance.wb.gov.in/Fin_New/HomePage.aspx)" target="_blank" class="dash-btn btn-govt" title="Finance Department Portal, Government of West Bengal for treasury and financial management.">
-                <i class="fa-solid fa-file-invoice-dollar"></i>
-                <span>WB Finance Department</span>
-            </a>
-            <a href="[https://wbxpress.com/](https://wbxpress.com/)" target="_blank" class="dash-btn btn-govt" title="WBXpress - Information portal for West Bengal government employees regarding pay, DA, and service rules.">
-                <i class="fa-solid fa-info-circle"></i>
-                <span>WBXpress (Employee Info)</span>
-            </a>
-        </div>
-    </section>
+        <!-- Existing Portal: SKMIS -->
+        <a href="https://skmis.wbhealth.gov.in/"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-notes-medical"></i>
+            <span>
+                SKMIS Portal
+                <small class="portal-description">
+                    State health management information and related services.
+                </small>
+            </span>
+        </a>
 
-    <!-- Section 4: Gsheet Link -->
-    <section class="dash-section" data-category="Gsheet Link">
-        <div class="section-header">
-            <i class="fa-solid fa-file-excel section-icon"></i>
-            <h2>Gsheet Link</h2>
-        </div>
-        <div class="button-grid">
-            <a href="[https://docs.google.com/spreadsheets/d/13GbBX7mvdPG8g3Q7BRT-WN4Zl2OBaVlqysIAa-nzQZ8/edit?gid=273642422#gid=273642422](https://docs.google.com/spreadsheets/d/13GbBX7mvdPG8g3Q7BRT-WN4Zl2OBaVlqysIAa-nzQZ8/edit?gid=273642422#gid=273642422)" target="_blank" class="dash-btn btn-sheet" title="Tracking sheet for inactive Community Health Officers (CHOs).">
-                <i class="fa-solid fa-table"></i>
-                <span>CHO Inactive Sheet</span>
-            </a>
-            <a href="[https://docs.google.com/spreadsheets/d/1zfe5JUxCwOJfBrwHdqxDbxC_FK6o2JCdoL6kkeTrOTE/edit?gid=341231704#gid=341231704](https://docs.google.com/spreadsheets/d/1zfe5JUxCwOJfBrwHdqxDbxC_FK6o2JCdoL6kkeTrOTE/edit?gid=341231704#gid=341231704)" target="_blank" class="dash-btn btn-sheet" title="Information Technology Support Programme (ITSP) ASHA mobile procurement tracking sheet.">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <span>ASHA Mobile Procurement (ITSP)</span>
-            </a>
-            <a href="[https://docs.google.com/spreadsheets/d/1_r9q9oXIVZHSnMDILZzv608YlQigYeYsSvg6KL4PJE4/edit?gid=1300280305#gid=1300280305](https://docs.google.com/spreadsheets/d/1_r9q9oXIVZHSnMDILZzv608YlQigYeYsSvg6KL4PJE4/edit?gid=1300280305#gid=1300280305)" target="_blank" class="dash-btn btn-sheet" title="Procurement and distribution tracker for Urban ASHA logistics.">
-                <i class="fa-solid fa-city"></i>
-                <span>Urban ASHA Procurement</span>
-            </a>
-            <a href="[https://docs.google.com/spreadsheets/d/1sVEJPAtfwrYNFa_40MObv7RA-gGBXvuUFJ98HveXcaY/edit?gid=740155955#gid=740155955](https://docs.google.com/spreadsheets/d/1sVEJPAtfwrYNFa_40MObv7RA-gGBXvuUFJ98HveXcaY/edit?gid=740155955#gid=740155955)" target="_blank" class="dash-btn btn-sheet" title="Procurement and distribution tracker for Rural ASHA logistics.">
-                <i class="fa-solid fa-tree"></i>
-                <span>Rural ASHA Procurement</span>
-            </a>
-            <a href="[https://docs.google.com/spreadsheets/d/1-ikYwWBdcoiXxxpjBDj7Pla5xwtbOHtlQAZYfjsK0Bw/edit?gid=1114417450#gid=1114417450](https://docs.google.com/spreadsheets/d/1-ikYwWBdcoiXxxpjBDj7Pla5xwtbOHtlQAZYfjsK0Bw/edit?gid=1114417450#gid=1114417450)" target="_blank" class="dash-btn btn-sheet" title="Archived legacy logistics details and records sheet.">
-                <i class="fa-solid fa-truck-ramp-box"></i>
-                <span>Logistics Details (Old)</span>
-            </a>
-            <a href="[https://docs.google.com/spreadsheets/d/12qsjDKoV-X0ZCloEMhl-OpX3TJJrF8qIIPaE6R1z7r4/edit?gid=362955215#gid=362955215](https://docs.google.com/spreadsheets/d/12qsjDKoV-X0ZCloEMhl-OpX3TJJrF8qIIPaE6R1z7r4/edit?gid=362955215#gid=362955215)" target="_blank" class="dash-btn btn-sheet" title="Current and updated logistics details and supply chain records sheet.">
-                <i class="fa-solid fa-box-open"></i>
-                <span>Logistics Details (New)</span>
-            </a>
-        </div>
-    </section>
+        <!-- Existing Portal: NCD -->
+        <a href="https://ncd.wb.gov.in/Auth/Login"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>
+                NCD Portal
+                <small class="portal-description">
+                    Non-Communicable Disease screening and programme management.
+                </small>
+            </span>
+        </a>
 
-</main>
+        <!-- NEW: WB Health -->
+        <a href="https://www.wbhealth.gov.in/"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-hospital"></i>
+            <span>
+                West Bengal Health Portal
+                <small class="portal-description">
+                    Official Health & Family Welfare Department website of West Bengal.
+                </small>
+            </span>
+        </a>
 
-<footer class="main-footer">
-    <p>&copy; Designed & Developed by ITSP, North 24 Parganas | Health & Family Welfare Department, Govt of West Bengal</p>
-</footer>
+        <!-- NEW: Health KPI -->
+        <a href="https://healthkpi.wbhealth.gov.in/"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-chart-column"></i>
+            <span>
+                Health KPI Portal
+                <small class="portal-description">
+                    Health programme key performance indicators and monitoring.
+                </small>
+            </span>
+        </a>
 
-<script src="app.js"></script>
+        <!-- NEW: Swasth Bharat -->
+        <a href="https://swasthbharat.mohfw.gov.in/"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span>
+                Swasth Bharat Portal
+                <small class="portal-description">
+                    Government of India health programme and financial monitoring.
+                </small>
+            </span>
+        </a>
 
-```
+        <!-- NEW: Finance Department -->
+        <a href="https://finance.wb.gov.in/Fin_New/HomePage.aspx"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <span>
+                WB Finance Department
+                <small class="portal-description">
+                    West Bengal Government finance, budget, orders and notifications.
+                </small>
+            </span>
+        </a>
+
+        <!-- NEW: WBXPress -->
+        <a href="https://wbxpress.com/"
+           target="_blank" class="dash-btn btn-govt">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>
+                WBXPress
+                <small class="portal-description">
+                    West Bengal Government orders, circulars, notifications and updates.
+                </small>
+            </span>
+        </a>
+
+    </div>
+</section>
+
+
+        <!-- Section 4: Gsheet Link -->
+        <section class="dash-section" data-category="Gsheet Link">
+            <div class="section-header">
+                <i class="fa-solid fa-file-excel section-icon"></i>
+                <h2>Gsheet Link</h2>
+            </div>
+            <div class="button-grid">
+                <a href="https://docs.google.com/spreadsheets/d/13GbBX7mvdPG8g3Q7BRT-WN4Zl2OBaVlqysIAa-nzQZ8/edit?gid=273642422#gid=273642422" target="_blank" class="dash-btn btn-sheet">
+                    <i class="fa-solid fa-table"></i>
+                    <span>CHO Inactive Sheet</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1zfe5JUxCwOJfBrwHdqxDbxC_FK6o2JCdoL6kkeTrOTE/edit?gid=341231704#gid=341231704" target="_blank" class="dash-btn btn-sheet">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>ASHA Mobile Procurement (ITSP)</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1_r9q9oXIVZHSnMDILZzv608YlQigYeYsSvg6KL4PJE4/edit?gid=1300280305#gid=1300280305" target="_blank" class="dash-btn btn-sheet">
+                    <i class="fa-solid fa-city"></i>
+                    <span>Urban ASHA Procurement</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1sVEJPAtfwrYNFa_40MObv7RA-gGBXvuUFJ98HveXcaY/edit?gid=740155955#gid=740155955" target="_blank" class="dash-btn btn-sheet">
+                    <i class="fa-solid fa-tree"></i>
+                    <span>Rural ASHA Procurement</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1-ikYwWBdcoiXxxpjBDj7Pla5xwtbOHtlQAZYfjsK0Bw/edit?gid=1114417450#gid=1114417450" target="_blank" class="dash-btn btn-sheet">
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+                    <span>Logistics Details (Old)</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/12qsjDKoV-X0ZCloEMhl-OpX3TJJrF8qIIPaE6R1z7r4/edit?gid=362955215#gid=362955215" target="_blank" class="dash-btn btn-sheet">
+                    <i class="fa-solid fa-box-open"></i>
+                    <span>Logistics Details (New)</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; Designed & Developed by ITSP, North 24 Parganas | Health & Family Welfare Department, Govt of West Bengal</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
